@@ -193,6 +193,7 @@
             this.buttonValidate.TabIndex = 16;
             this.buttonValidate.Text = "Valider";
             this.buttonValidate.UseVisualStyleBackColor = true;
+            this.buttonValidate.Click += new System.EventHandler(this.buttonValidate_Click);
             // 
             // UserForm
             // 
@@ -217,6 +218,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserForm";
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

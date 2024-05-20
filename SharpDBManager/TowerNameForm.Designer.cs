@@ -93,6 +93,7 @@
             this.buttonValidate.TabIndex = 5;
             this.buttonValidate.Text = "Valider";
             this.buttonValidate.UseVisualStyleBackColor = true;
+            this.buttonValidate.Click += new System.EventHandler(this.buttonValidate_Click);
             // 
             // TowerNameForm
             // 
@@ -107,6 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TowerNameForm";
             this.Text = "TowerNameForm";
+            this.Load += new System.EventHandler(this.TowerNameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

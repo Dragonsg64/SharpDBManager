@@ -68,7 +68,7 @@
             this.jeuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tourToolStripMenuItem});
             this.jeuToolStripMenuItem.Name = "jeuToolStripMenuItem";
-            this.jeuToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.jeuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.jeuToolStripMenuItem.Text = "jeu";
             // 
             // tourToolStripMenuItem
@@ -99,7 +99,7 @@
             this.bDDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userToolStripMenuItem});
             this.bDDToolStripMenuItem.Name = "bDDToolStripMenuItem";
-            this.bDDToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.bDDToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bDDToolStripMenuItem.Text = "BDD";
             // 
             // userToolStripMenuItem
@@ -112,25 +112,26 @@
             // leaveToolStripMenuItem
             // 
             this.leaveToolStripMenuItem.Name = "leaveToolStripMenuItem";
-            this.leaveToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.leaveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.leaveToolStripMenuItem.Text = "quitter";
             this.leaveToolStripMenuItem.Click += new System.EventHandler(this.leaveStripMenuItem_Click);
             // 
             // DisconnectButton
             // 
             this.DisconnectButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.DisconnectButton.Location = new System.Drawing.Point(687, 31);
+            this.DisconnectButton.Location = new System.Drawing.Point(660, 31);
             this.DisconnectButton.Name = "DisconnectButton";
-            this.DisconnectButton.Size = new System.Drawing.Size(101, 42);
+            this.DisconnectButton.Size = new System.Drawing.Size(128, 42);
             this.DisconnectButton.TabIndex = 1;
             this.DisconnectButton.Text = "déconnection";
             this.DisconnectButton.UseVisualStyleBackColor = true;
+            this.DisconnectButton.Click += new System.EventHandler(this.DisconnectButton_Click);
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(580, 31);
+            this.ConnectButton.Location = new System.Drawing.Point(526, 31);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(101, 42);
+            this.ConnectButton.Size = new System.Drawing.Size(128, 42);
             this.ConnectButton.TabIndex = 2;
             this.ConnectButton.Text = "connection";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -146,7 +147,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "SharpDBManager";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

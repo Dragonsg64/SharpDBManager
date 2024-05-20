@@ -21,6 +21,7 @@ namespace SharpDBManager
         {
             InitializeComponent();
         }
+
         private void TowerNameForm_Load(object sender, EventArgs e)
         {
             TowersNameForm towersNameForm = Owner as TowersNameForm;
@@ -28,7 +29,6 @@ namespace SharpDBManager
             ListView listview = towersNameForm.ListViewTowersNameForm;
 
             textBoxId.Enabled = false;
-
 
 
             switch (formState)
@@ -75,7 +75,7 @@ namespace SharpDBManager
                         string request;
                         MySqlCommand mySqlCommand;
 
-                        request = $"INSERT INTO tower (name, target) VALUES ('{textBoxName.Text}');";
+                        request = $"INSERT INTO tower (name) VALUES ('{textBoxName.Text}');";
                         mySqlCommand = new MySqlCommand(request, MainForm.mySqlConnection);
                         mySqlCommand.ExecuteNonQuery();
                         break;

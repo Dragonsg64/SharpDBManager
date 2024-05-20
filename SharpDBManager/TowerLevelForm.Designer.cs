@@ -43,7 +43,7 @@
             this.textBoxScope = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonValidate = new System.Windows.Forms.Button();
-            this.comboBoxId_name = new System.Windows.Forms.ComboBox();
+            this.comboBoxId_tower = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -184,23 +184,24 @@
             this.buttonValidate.TabIndex = 15;
             this.buttonValidate.Text = "Valider";
             this.buttonValidate.UseVisualStyleBackColor = true;
+            this.buttonValidate.Click += new System.EventHandler(this.buttonValidate_Click);
             // 
             // comboBoxId_name
             // 
-            this.comboBoxId_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxId_tower.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxId_name.FormattingEnabled = true;
-            this.comboBoxId_name.Location = new System.Drawing.Point(16, 364);
-            this.comboBoxId_name.Name = "comboBoxId_name";
-            this.comboBoxId_name.Size = new System.Drawing.Size(270, 24);
-            this.comboBoxId_name.TabIndex = 16;
+            this.comboBoxId_tower.FormattingEnabled = true;
+            this.comboBoxId_tower.Location = new System.Drawing.Point(16, 364);
+            this.comboBoxId_tower.Name = "comboBoxId_name";
+            this.comboBoxId_tower.Size = new System.Drawing.Size(270, 24);
+            this.comboBoxId_tower.TabIndex = 16;
             // 
             // TowerLevelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 475);
-            this.Controls.Add(this.comboBoxId_name);
+            this.Controls.Add(this.comboBoxId_tower);
             this.Controls.Add(this.buttonValidate);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.textBoxScope);
@@ -218,6 +219,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TowerLevelForm";
             this.Text = "TowerLevelForm";
+            this.Load += new System.EventHandler(this.TowerLevelForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +242,6 @@
         private System.Windows.Forms.TextBox textBoxScope;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonValidate;
-        private System.Windows.Forms.ComboBox comboBoxId_name;
+        private System.Windows.Forms.ComboBox comboBoxId_tower;
     }
 }

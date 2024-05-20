@@ -19,12 +19,12 @@ namespace SharpDBManager
         public string TextBoxDommage => textBoxDommage.Text;
         public string TextBoxFireRate => textBoxFireRate.Text;
         public string TextBoxScope => textBoxScope.Text;
-        public string ComboBoxId_name => comboBoxId_name.Text;
+        public string ComboBoxId_name => comboBoxId_tower.Text;
         public TowerLevelForm()
         {
             InitializeComponent();
         }
-        private void TowerForm_Load(object sender, EventArgs e)
+        private void TowerLevelForm_Load(object sender, EventArgs e)
         {
             TowersLevelForm towersLevelForm = Owner as TowersLevelForm;
             int formState = towersLevelForm.FormState;
@@ -49,7 +49,7 @@ namespace SharpDBManager
                         textBoxDommage.Text = listViewItem.SubItems[3].Text;
                         textBoxFireRate.Text = listViewItem.SubItems[4].Text;
                         textBoxScope.Text = listViewItem.SubItems[5].Text;
-                        comboBoxId_name.Text = listViewItem.SubItems[6].Text;
+                        comboBoxId_tower.Text = listViewItem.SubItems[6].Text;
 
 
                         if (formState == 3)
@@ -60,7 +60,7 @@ namespace SharpDBManager
                             textBoxDommage.Enabled = false;
                             textBoxFireRate.Enabled = false;
                             textBoxScope.Enabled = false;
-                            comboBoxId_name.Enabled = false;
+                            comboBoxId_tower.Enabled = false;
 
                         }
                         break;
@@ -98,7 +98,7 @@ namespace SharpDBManager
                         MySqlCommand mySqlCommand;
 
 
-                        request = $"INSERT INTO tower_level (level, price, dommage, fireRate, scope, id_name) VALUES ('{textBoxLevel.Text}', '{textBoxPrice.Text}', '{textBoxDommage.Text}', '{textBoxFireRate.Text}', '{textBoxScope.Text}', '{comboBoxId_name.Text}');";
+                        request = $"INSERT INTO tower_level (level, price, dommage, fireRate, scope, id_tower) VALUES ('{textBoxLevel.Text}', '{textBoxPrice.Text}', '{textBoxDommage.Text}', '{textBoxFireRate.Text}', '{textBoxScope.Text}', '{comboBoxId_tower.Text}');";
                         mySqlCommand = new MySqlCommand(request, MainForm.mySqlConnection);
                         mySqlCommand.ExecuteNonQuery();
                         break;
@@ -109,7 +109,7 @@ namespace SharpDBManager
                         string request;
                         MySqlCommand mySqlCommand;
 
-                        request = $"UPDATE tower_level SET level = '{textBoxLevel.Text}', price = '{textBoxPrice.Text}', dommage = '{textBoxDommage.Text}', firerate = '{textBoxFireRate.Text}', scope = '{textBoxScope.Text}', id_name = '{comboBoxId_name.Text}' WHERE Id = {textBoxId.Text}";
+                        request = $"UPDATE tower_level SET level = '{textBoxLevel.Text}', price = '{textBoxPrice.Text}', dommage = '{textBoxDommage.Text}', firerate = '{textBoxFireRate.Text}', scope = '{textBoxScope.Text}', id_tower = '{comboBoxId_tower.Text}' WHERE Id = {textBoxId.Text}";
                         mySqlCommand = new MySqlCommand(request, MainForm.mySqlConnection);
                         mySqlCommand.ExecuteNonQuery();
                         break;
