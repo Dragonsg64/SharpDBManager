@@ -51,6 +51,8 @@ namespace SharpDBManager
                     ConnectButton.Enabled = false;
                     DisconnectButton.Enabled = true;
                     userToolStripMenuItem.Enabled = true;
+                    nameToolStripMenuItem.Enabled = true;
+                    levelToolStripMenuItem.Enabled = true;
                 }
             }
         }
@@ -64,6 +66,8 @@ namespace SharpDBManager
                 ConnectButton.Enabled = true;
                 DisconnectButton.Enabled = false;
                 userToolStripMenuItem.Enabled = false;
+                nameToolStripMenuItem.Enabled = false;
+                levelToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -71,6 +75,8 @@ namespace SharpDBManager
         {
             DisconnectButton.Enabled = false;
             userToolStripMenuItem.Enabled = false;
+            nameToolStripMenuItem.Enabled = false;
+            levelToolStripMenuItem.Enabled = false;
         }
 
         private void nameToolStripMenuItem_Click(object sender, EventArgs e)
