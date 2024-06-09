@@ -43,7 +43,7 @@ namespace SharpDBManager
             textBoxHost.Text = "localhost";
             textBoxUser.Text = "root";
             textBoxPassword.Text = "";
-            textBoxDatabase.Text = "tower_defense";
+            textBoxDatabase.Text = "tower_defence";
         }
 
         private void buttonValidate_Click(object sender, EventArgs e)
